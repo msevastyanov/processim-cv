@@ -1,0 +1,11 @@
+﻿<div id="resources-palette-wrapper">
+  <mat-card>
+    <mat-card-title>
+      Ресурсы
+    </mat-card-title>
+    <gojs-palette #myPalette [initPalette]='initPalette' [divClassName]='paletteDivClassName'
+                  [nodeDataArray]='paletteNodeData'
+                  [linkDataArray]='paletteLinkData' [modelData]='paletteModelData'
+                  (modelChange)='paletteModelChange($event)'></gojs-palette>
+  </mat-card>
+</div>

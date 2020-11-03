@@ -1,0 +1,11 @@
+﻿<div id="other-palette-wrapper">
+  <mat-card>
+    <mat-card-title>
+      Начало / конец
+    </mat-card-title>
+    <gojs-palette #myPalette [initPalette]='initPalette' [divClassName]='paletteDivClassName'
+                  [nodeDataArray]='paletteNodeData'
+                  [linkDataArray]='paletteLinkData' [modelData]='paletteModelData'
+                  (modelChange)='paletteModelChange($event)'></gojs-palette>
+  </mat-card>
+</div>

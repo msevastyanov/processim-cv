@@ -1,0 +1,149 @@
+﻿<h1 class="sim_result-title" mat-dialog-title>
+  Детали моделирования ({{data.simulationName}})
+</h1>
+<p class="-date_time">
+  {{data.dateTime | date:'dd.MM.yyyy HH:mm'}}
+</p>
+<div mat-dialog-content class="dialog-content">
+  <div id="simulation-result-content">
+    <div class="row">
+      <div class="col-6">
+        <div class="sim_result_block">
+          <p class="sim_result_block-title">
+            Общая информация
+          </p>
+          <div class="sim_result_block-row">
+            <div class="row">
+              <div class="col-8">
+                Общая продолжительность:
+              </div>
+              <div class="col-4">
+                {{ timeConvert(data.duration) }}
+              </div>
+            </div>
+          </div>
+          <div class="sim_result_block-row">
+            <div class="row">
+              <div class="col-8">
+                Продолжительность задержек:
+              </div>
+              <div class="col-4">
+                {{ timeConvert(data.randomEventsDuration) }}
+              </div>
+            </div>
+          </div>
+          <div class="sim_result_block-row">
+            <div class="row">
+              <div class="col-8">
+                Сложность ОП:
+              </div>
+              <div class="col-4">
+                {{ data.complexity.toFixed(2) }}
+              </div>
+            </div>
+          </div>
+          <div class="sim_result_block-row">
+            <div class="row">
+              <div class="col-8">
+                Шаг моделирования:
+              </div>
+              <div class="col-4">
+                {{ data.step }}
+              </div>
+            </div>
+          </div>
+          <div class="sim_result_block-row">
+            <div class="row">
+              <div class="col-8">
+                Стоимость ресурсов:
+              </div>
+              <div class="col-4">
+                {{ data.totalCost }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sim_result_block">
+          <p class="sim_result_block-title">
+            Ресурсы
+          </p>
+          <ng-container *ngFor="let resource of data.resourceResults">
+            <p class="sim_result_block-subtitle">
+              {{resource.resourceName}}
+            </p>
+            <div class="sim_result_block-row">
+              <div class="row">
+                <div class="col-5">
+                  Использование:
+                </div>
+                <div class="col-7">
+                  {{ resource.useTime }}:
+                  <ng-container *ngFor="let period of resource.activeTime; let i = index">
+                  <span>
+                    ({{period.from}} - {{period.to}})<span *ngIf="i+1 < resource.activeTime.length">, </span>
+                  </span>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+            <div class="sim_result_block-row">
+              <div class="row">
+                <div class="col-5">
+                  Простой:
+                </div>
+                <div class="col-7">
+                  {{ timeConvert(resource.downtime) }}
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="sim_result_block">
+          <p class="sim_result_block-title">
+            Процедуры
+          </p>
+          <ng-container *ngFor="let procedure of data.procedureResults">
+            <p class="sim_result_block-subtitle">
+              {{procedure.procedureAlias}}
+            </p>
+            <div class="sim_result_block-row">
+              <div class="row">
+                <div class="col-8">
+                  Общая продолжительность:
+                </div>
+                <div class="col-4">
+                  {{ timeConvert(procedure.duration) }} ({{procedure.startTime}} - {{procedure.endTime}})
+                </div>
+              </div>
+            </div>
+            <div *ngIf="procedure.waitingTime" class="sim_result_block-row">
+              <div class="row">
+                <div class="col-8">
+                  Ожидание:
+                </div>
+                <div class="col-4">
+                  {{ procedure.waitingTime }}
+                </div>
+              </div>
+            </div>
+            <div *ngFor="let randomEvent of procedure.randomEvents" class="sim_result_block-row">
+              <div class="row">
+                <div class="col-8">
+                  {{randomEvent.eventName}}:
+                </div>
+                <div class="col-4">
+                  {{ timeConvert(randomEvent.duration) }} ({{randomEvent.timeStart}} - {{randomEvent.timeEnd}})
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+
+</div>

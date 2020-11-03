@@ -1,0 +1,11 @@
+﻿#procedures-palette-wrapper {
+  position: fixed;
+  top: 295px;
+  left: 10px;
+  height: calc(50% - 150px);
+  width: 343px;
+
+  > * {
+    height: 100%;
+  }
+}

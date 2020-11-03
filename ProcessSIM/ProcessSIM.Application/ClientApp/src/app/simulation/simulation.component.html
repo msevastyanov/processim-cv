@@ -1,0 +1,10 @@
+﻿<div id="sim_control-wrapper">
+  <app-sim-control (startSimulation)="startSimulation()" (clearSimulation)="clearSimulation()" (simConfig)="simConfig()" (simComplexity)="simComplexity()"></app-sim-control>
+</div>
+<app-other-palette [paletteNodeData]="otherPaletteNodeData" [paletteLinkData]="otherPaletteLinkData"></app-other-palette>
+<app-procedures-palette [paletteNodeData]="procPaletteNodeData" [paletteLinkData]="procPaletteLinkData"></app-procedures-palette>
+<app-resources-palette [paletteNodeData]="resPaletteNodeData" [paletteLinkData]="resPaletteLinkData"></app-resources-palette>
+<app-simulation-diagram [diagramNodeData]="diagramNodeData" [diagramLinkData]="diagramLinkData" (onChangeSelectedNode)="setSelectedNode($event)" (onChangeDiagramData)="updateDiagramData($event)"></app-simulation-diagram>
+<app-selected-node [selectedNode]="selectedNode" (updateProcedureParameters)="updateProcedureParameters($event)" [complexity]="complexity"></app-selected-node>
+<app-simulation-result [result]="simulationResult"></app-simulation-result>
+

@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ProcessSIM.Domain\ProcessSIM.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

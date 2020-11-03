@@ -1,0 +1,14 @@
+﻿<div id="selected-node-wrapper">
+  <mat-card>
+    <mat-card-title>
+      Сложность ОП: {{ complexity.toFixed(2) }}
+    </mat-card-title>
+    <ng-container *ngIf='selectedNode'>
+      <app-resource-info *ngIf="selectedNode.category === 'Resource'" [resource]="selectedNode.data"></app-resource-info>
+      <app-procedure-info *ngIf="selectedNode.category === 'Procedure'" [procedure]="selectedNode.data" (onFormChange)="handleProcParamsChange($event)"></app-procedure-info>
+    </ng-container>
+<!--    <ng-container *ngIf='!selectedNode'>-->
+<!--        Выберите узел-->
+<!--    </ng-container>-->
+  </mat-card>
+</div>

@@ -1,0 +1,9 @@
+﻿<div id="diagram-wrapper">
+  <mat-card>
+    <gojs-diagram #myDiagram [initDiagram]='initDiagram' [nodeDataArray]='diagramNodeData'
+                  [linkDataArray]='diagramLinkData'
+                  [divClassName]='diagramDivClassName' [modelData]='diagramModelData'
+                  (modelChange)='diagramModelChange($event)'>
+    </gojs-diagram>
+  </mat-card>
+</div>

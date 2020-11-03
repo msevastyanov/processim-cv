@@ -1,0 +1,11 @@
+﻿<div id="procedures-palette-wrapper">
+  <mat-card>
+    <mat-card-title>
+      Процедуры
+    </mat-card-title>
+    <gojs-palette #myPalette [initPalette]='initPalette' [divClassName]='paletteDivClassName'
+                  [nodeDataArray]='paletteNodeData'
+                  [linkDataArray]='paletteLinkData' [modelData]='paletteModelData'
+                  (modelChange)='paletteModelChange($event)'></gojs-palette>
+  </mat-card>
+</div>

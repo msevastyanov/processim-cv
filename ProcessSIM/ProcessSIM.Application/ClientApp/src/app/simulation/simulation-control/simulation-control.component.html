@@ -1,0 +1,19 @@
+﻿<mat-card>
+  <div class="buttons-row">
+    <button (click)="start()" mat-mini-fab color="success" matTooltip="Запустить">
+      <mat-icon>play_arrow</mat-icon>
+    </button>
+<!--    <button mat-mini-fab color="primary" matTooltip="Сохранить">-->
+<!--      <mat-icon>save</mat-icon>-->
+<!--    </button>-->
+    <button (click)="clear()" mat-mini-fab color="cancel" matTooltip="Очистить">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button (click)="config()" class="float-right" mat-mini-fab color="cancel" matTooltip="Параметры">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button (click)="complexity()" class="float-right" mat-mini-fab color="cancel" matTooltip="Сложность ОП">
+      ОП
+    </button>
+  </div>
+</mat-card>

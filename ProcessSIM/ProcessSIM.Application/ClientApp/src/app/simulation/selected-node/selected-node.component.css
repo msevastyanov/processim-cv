@@ -1,0 +1,9 @@
+#selected-node-wrapper {
+  position: fixed;
+  top: 75px;
+  right: 10px;
+  width: 380px;
+  height: 35%; }
+
+#selected-node-wrapper > *, #selected-node-wrapper .mat-card {
+  height: 100%; }

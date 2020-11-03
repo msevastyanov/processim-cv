@@ -1,0 +1,148 @@
+﻿<h1 mat-dialog-title>
+  Сложность объекта проектирования
+</h1>
+<div mat-dialog-content>
+  <div class="row">
+    <div class="col-6">
+      <label class="radio-group-label">Количество оригинальных деталей</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="data.originalDetailsCountValue">
+        <mat-radio-button class="radio-button" [value]="0.3">
+          от 1 до 9
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="0.5">
+          от 10 до 19
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="1">
+          более 20
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="col-6">
+      <label class="radio-group-label">Наличие в составе стандартных изделий</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="data.isStandardDetailsValue">
+        <mat-radio-button class="radio-button" [value]="1">
+          Присутствуют
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="0">
+          Отсутствуют
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label class="radio-group-label">Наличие сборочных единиц, выполняемых заливкой или наплавкой</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="data.isAssemblyUnitsSurfValue">
+        <mat-radio-button class="radio-button" [value]="1">
+          Присутствуют
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="0">
+          Отсутствуют
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="col-6">
+      <label class="radio-group-label">Наличие сборочных единиц, выполняемых соединением</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="data.isAssemblyUnitsConnValue">
+        <mat-radio-button class="radio-button" [value]="1">
+          Присутствуют
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="0">
+          Отсутствуют
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label class="radio-group-label">Форма поверхностей, определяющих деталь</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="data.surfaceFormValue">
+        <mat-radio-button class="radio-button" [value]="0.5">
+          Конкус, цилиндр, призма
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="1">
+          Задана криволинейной поверхностью
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="col-6">
+      <label class="radio-group-label">Наличие конструктивных элементов</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="data.isStructuralElementsValue">
+        <mat-radio-button class="radio-button" [value]="1">
+          Присутствуют
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="0">
+          Отсутствуют
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label class="radio-group-label">Удобство работы с деталями</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="data.workWithPartsValue">
+        <mat-radio-button class="radio-button" [value]="0">
+          Детали большого и среднего размера
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="1">
+          Детали мелкого размера
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="col-6">
+      <label class="radio-group-label">Наличие деталей с конструкцией, ограничивающей визуальное восприятие формы внутренней поверхности</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="data.isRestrictDetailsValue">
+        <mat-radio-button class="radio-button" [value]="1">
+          Присутствуют
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" [value]="0">
+          Отсутствуют
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+<!--  <mat-form-field>-->
+<!--    <mat-label>Шаг моделирования (мин)</mat-label>-->
+<!--    <input type="number" matInput [(ngModel)]="data.step">-->
+<!--  </mat-form-field>-->
+<!--  <mat-form-field>-->
+<!--    <mat-label>Сложность объекта проектирования (от 0 до 1)</mat-label>-->
+<!--    <input type="number" matInput [(ngModel)]="data.complexity">-->
+<!--  </mat-form-field>-->
+<!--  <mat-form-field>-->
+<!--    <mat-label>Название процесса</mat-label>-->
+<!--    <input matInput [(ngModel)]="data.simulationName">-->
+<!--  </mat-form-field>-->
+</div>
+<div mat-dialog-actions>
+  <button mat-mini-fab [mat-dialog-close]="data" cdkFocusInitial color="primary" matTooltip="Сохранить">
+    <mat-icon>save</mat-icon>
+  </button>
+  <button mat-mini-fab (click)="onNoClick()" color="cancel" matTooltip="Отмена">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

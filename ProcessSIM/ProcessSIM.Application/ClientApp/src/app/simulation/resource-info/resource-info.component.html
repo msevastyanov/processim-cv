@@ -1,0 +1,30 @@
+﻿<mat-card-title>
+  {{ resource.name }}
+</mat-card-title>
+<div class="resource-info">
+  <div class="row">
+    <div class="col-4">
+      Тип:
+    </div>
+    <div class="col-8">
+      Ресурс ({{ resource.type }})
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      Стоимость:
+    </div>
+    <div class="col-8">
+      {{ resource.price }} руб.
+    </div>
+  </div>
+  <br/>
+  <div *ngFor="let param of resource.parameters" class="row">
+    <div class="col-8">
+      {{ param.alias }}:
+    </div>
+    <div class="col-4">
+      {{ param.value }}
+    </div>
+  </div>
+</div>

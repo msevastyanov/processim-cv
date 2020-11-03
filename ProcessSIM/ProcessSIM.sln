@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSIM.Application", "ProcessSIM.Application\ProcessSIM.Application.csproj", "{2682CBF9-CC03-4EE4-8419-BAC5679CD002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSIM.Domain", "ProcessSIM.Domain\ProcessSIM.Domain.csproj", "{8BE148BE-CA3F-498C-A14E-2EF27B9BB091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSIM.Infrastructure", "ProcessSIM.Infrastructure\ProcessSIM.Infrastructure.csproj", "{FFBDBA69-4961-4F10-9316-778E5E7618C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSIM.Test", "ProcessSIM.Test\ProcessSIM.Test.csproj", "{54BB78AF-7632-4DB5-B95E-FA358FB05C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSIM.ServiceLayer", "ProcessSIM.ServiceLayer\ProcessSIM.ServiceLayer.csproj", "{D16150DF-930A-491A-8998-41933FA708A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSIM.Simulation", "ProcessSIM.Simulation\ProcessSIM.Simulation.csproj", "{E658F3FF-0E25-4CD0-83D8-89669ADA1B52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2682CBF9-CC03-4EE4-8419-BAC5679CD002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2682CBF9-CC03-4EE4-8419-BAC5679CD002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2682CBF9-CC03-4EE4-8419-BAC5679CD002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2682CBF9-CC03-4EE4-8419-BAC5679CD002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE148BE-CA3F-498C-A14E-2EF27B9BB091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE148BE-CA3F-498C-A14E-2EF27B9BB091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE148BE-CA3F-498C-A14E-2EF27B9BB091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE148BE-CA3F-498C-A14E-2EF27B9BB091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFBDBA69-4961-4F10-9316-778E5E7618C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFBDBA69-4961-4F10-9316-778E5E7618C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFBDBA69-4961-4F10-9316-778E5E7618C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFBDBA69-4961-4F10-9316-778E5E7618C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54BB78AF-7632-4DB5-B95E-FA358FB05C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BB78AF-7632-4DB5-B95E-FA358FB05C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BB78AF-7632-4DB5-B95E-FA358FB05C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BB78AF-7632-4DB5-B95E-FA358FB05C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16150DF-930A-491A-8998-41933FA708A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16150DF-930A-491A-8998-41933FA708A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16150DF-930A-491A-8998-41933FA708A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16150DF-930A-491A-8998-41933FA708A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E658F3FF-0E25-4CD0-83D8-89669ADA1B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E658F3FF-0E25-4CD0-83D8-89669ADA1B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E658F3FF-0E25-4CD0-83D8-89669ADA1B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E658F3FF-0E25-4CD0-83D8-89669ADA1B52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A2A6DED-EE2A-446D-A29D-F40E70CEA81F}
+	EndGlobalSection
+EndGlobal

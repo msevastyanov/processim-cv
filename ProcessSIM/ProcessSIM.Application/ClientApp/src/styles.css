@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6; }
+
+code {
+  color: #e01a76; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac; }
+
+html, body {
+  height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f7f7f7; }
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 15px; }
+
+.radio-group-label {
+  font-weight: 500; }
+
+.radio-button {
+  margin: 5px; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f7f9fc; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e1e8f2;
+  border-radius: 2px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e1e8f2; }
+
+.align-right {
+  text-align: right; }
+
+.full-width {
+  width: 100%; }
+
+.menu-spacer {
+  margin-left: 10px; }
+
+.mat-button, .mat-button:hover {
+  text-decoration: none; }
+
+.mat-dialog-container {
+  position: relative; }
+
+button:focus {
+  outline: none !important; }
+
+.form-field {
+  width: 100%; }
+
+.float-right {
+  float: right; }
+
+.mat-toolbar .mat-button {
+  text-transform: uppercase; }
+
+.buttons-row button,
+.buttons-row a {
+  margin-right: 8px; }
+
+.mat-card-title {
+  font-size: 1em; }
+
+.mat-toolbar {
+  margin-bottom: 10px; }
+
+.mat-toolbar.mat-primary {
+  background: #4f5786;
+  color: #fff; }
+
+.mat-toolbar .mat-button {
+  color: #fff; }
+
+.mat-button.mat-success,
+.mat-raised-button.mat-success,
+.mat-flat-button.mat-success,
+.mat-fab.mat-success,
+.mat-mini-fab.mat-success {
+  background-color: #00e676; }
+
+.mat-raised-button.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  background-color: #BBDEFB;
+  color: #000; }
+
+.mat-button.mat-cancel,
+.mat-raised-button.mat-cancel,
+.mat-flat-button.mat-cancel,
+.mat-fab.mat-cancel,
+.mat-mini-fab.mat-cancel {
+  background-color: #E0E0E0; }
+
+table {
+  width: 100%; }
+
+.table-align-right {
+  text-align: right !important; }
+
+.table-actions > * {
+  margin-left: 10px !important; }
+
+.table-hover_row {
+  transition: 0.1s;
+  cursor: pointer; }
+  .table-hover_row:hover {
+    background-color: #EEEEEE;
+    transition: 0.1s; }
+
+.mat-card-actions:not(.default-actions) {
+  position: absolute;
+  top: 5px;
+  right: 25px; }
+
+.mat-card-actions:not(.default-actions) > * {
+  margin-left: 10px !important; }

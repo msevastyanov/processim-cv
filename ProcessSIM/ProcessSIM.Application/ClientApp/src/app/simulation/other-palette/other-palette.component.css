@@ -1,0 +1,9 @@
+#other-palette-wrapper {
+  position: fixed;
+  top: 155px;
+  left: 10px;
+  height: 130px;
+  width: 343px; }
+
+#other-palette-wrapper > * {
+  height: 100%; }

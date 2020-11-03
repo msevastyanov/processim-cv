@@ -1,0 +1,9 @@
+#resources-palette-wrapper {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  height: calc(50% - 165px);
+  width: 343px; }
+
+#resources-palette-wrapper > * {
+  height: 100%; }

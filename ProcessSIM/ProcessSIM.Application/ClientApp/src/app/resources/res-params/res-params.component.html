@@ -1,0 +1,62 @@
+﻿<h1 mat-dialog-title>
+  {{ data.name }}: параметры
+</h1>
+<div mat-dialog-content>
+  <div class="mat-card-actions">
+    <button mat-mini-fab (click)="onNoClick()" color="cancel" matTooltip="Отмена">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <mat-form-field>
+    <mat-label>Поиск</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Введите название">
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="alias">
+      <th mat-header-cell *matHeaderCellDef> Псевдоним</th>
+      <td mat-cell *matCellDef="let element"> {{element.alias}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef> Значение</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-form-field *ngIf="selectedParam && selectedParam.id == element.id">
+          <input matInput [(ngModel)]="selectedParam.value">
+        </mat-form-field>
+        <ng-container *ngIf="!selectedParam || selectedParam.id != element.id">
+          {{element.value}}
+        </ng-container>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="table-align-right"> Действия</th>
+      <td mat-cell *matCellDef="let element" class="table-align-right">
+        <div class="table-actions">
+          <button *ngIf="!selectedParam || selectedParam.id != element.id" (click)="setSelectedParam(element)"
+                  mat-mini-fab color="cancel" matTooltip="Редактировать">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <ng-container *ngIf="selectedParam && selectedParam.id == element.id">
+            <button (click)="updateParam()" mat-mini-fab color="primary" matTooltip="Сохранить">
+              <mat-icon>save</mat-icon>
+            </button>
+            <button (click)="selectedParam = null" mat-mini-fab color="cancel" matTooltip="Отмена">
+              <mat-icon>close</mat-icon>
+            </button>
+          </ng-container>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <br/>
+</div>
+

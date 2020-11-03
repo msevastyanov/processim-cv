@@ -1,0 +1,49 @@
+﻿<mat-card-title>
+  {{ procedure.alias }}
+</mat-card-title>
+<div class="procedure-info">
+  <div class="row">
+    <div class="col-4">
+      Тип:
+    </div>
+    <div class="col-8">
+      Процедура
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      Требуемые ресурсы:
+    </div>
+    <div class="col-8">
+      {{procedure.resourcesList}}
+    </div>
+  </div>
+  <hr/>
+  <div class="procedure-info-actions">
+    <button *ngIf="!isEditMode" (click)="setIsEditMode()" mat-mini-fab color="cancel"
+            matTooltip="Редактировать значения параметров">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button *ngIf="isEditMode" (click)="save()" mat-mini-fab color="primary" matTooltip="Сохранить значения параметров">
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+  <ng-container *ngIf="!isEditMode">
+    <div *ngFor="let param of procedure.parameters" class="row">
+      <div class="col-8">
+        {{ param.alias }}:
+      </div>
+      <div class="col-4">
+        {{ param.value || "-" }}
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="isEditMode">
+    <form class="form">
+      <mat-form-field *ngFor="let param of filterParameters()" class="form-field">
+        <mat-label>{{param.alias}}</mat-label>
+        <input matInput placeholder="{{param.alias}}" [(ngModel)]="param.value" name="param.value">
+      </mat-form-field>
+    </form>
+  </ng-container>
+</div>

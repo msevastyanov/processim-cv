@@ -1,0 +1,48 @@
+#simulation-result-wrapper {
+  position: fixed;
+  top: calc(35% + 85px);
+  bottom: 10px;
+  right: 10px;
+  width: 380px; }
+
+#simulation-result-wrapper > *, #simulation-result-wrapper .mat-card {
+  height: 100%; }
+
+#simulation-result-content {
+  height: calc(100% - 30px);
+  font-size: 1.1em; }
+
+.sim_result_block {
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 5px;
+  margin-bottom: 3px; }
+
+.sim_result_block-title {
+  margin-bottom: 0;
+  font-weight: 500; }
+
+.sim_result_block-subtitle {
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 0.9em;
+  border-top: 1px solid #d8d8d8; }
+
+.sim_result_block-row {
+  font-size: 0.85em; }
+
+.sim_result_block-row .row > div:first-child {
+  color: #848484; }
+
+.sim_result-error {
+  color: #F44336;
+  font-weight: 500; }
+
+.sim_result-title {
+  margin: 0; }
+
+.sim_result-date_time {
+  color: grey;
+  font-size: 0.9em; }
+
+.dialog-content {
+  max-height: 80vh; }

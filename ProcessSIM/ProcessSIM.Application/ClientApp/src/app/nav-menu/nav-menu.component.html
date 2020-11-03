@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="main-nav">
+    <div class="menu-left">
+      <h1>ProcessSIM</h1>
+      <span class="menu-spacer"></span>
+      <ng-container *ngIf="isLoggedIn">
+        <a mat-button [routerLink]="['/']"> Главная </a>
+        <a mat-button [routerLink]="['/simulation']"> Моделирование </a>
+        <a mat-button [routerLink]="['/resources']" *ngIf="userRole === 'Admin'"> Ресурсы </a>
+        <a mat-button [routerLink]="['/history']"> История </a>
+      </ng-container>
+<!--      <a mat-button> О проекте </a>-->
+    </div>
+    <div class="menu-right">
+      <ng-container *ngIf="isLoggedIn">
+        <mat-menu #appMenu="matMenu">
+          <button (click)="logout()" mat-menu-item>
+            Выход
+          </button>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="appMenu">
+          {{userInfo.firstName}} {{userInfo.lastName}}
+        </button>
+      </ng-container>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
